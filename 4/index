@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="utf-8">
+	<link rel="icon" type="image/png" href="http://lltip.gitee.io/llt/favicon.png">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>艾峰科技官网</title>
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="icon" type="image/png" href="htt11d%70/">
+<meta name="keywords" content="微商软件官网系统">
+<meta name="description" content="微商软件官网系统">
+<script>
+function refresh(){
+url = location.href;
+console.log(url);
+var once = url.split("#");
+if (once[1] != 1) {
+url += "#1";
+self.location.replace(url);
+window.location.reload();
+}
+}
+setTimeout('refresh()', 1000);
+</script><style type="text/css">
+    #demo {
+        width: 70px;
+        height: 70px;
+        position:absolute;
+        border-radius:110px;
+    }
+</style><script type="text/javascript">
+    window.onload = function(){
+        var demo = document.getElementById('demo');
+        var sx = sy = 15;
+        var x = y = 0;
+ 
+        function move(){
+            if(document.documentElement.clientWidth - demo.offsetWidth-10 < x || x < 0){
+                sx = -sx;
+            }
+ 
+            if(document.documentElement.clientHeight - demo.offsetHeight-10 < y || y < 0){
+                sy = -sy;
+            }
+ 
+            x = demo.offsetLeft + sx;
+            y = demo.offsetTop + sy;
+ 
+            demo.style.left = x + 'px';
+            demo.style.top = y + 'px';
+        }
+ 
+        var timer = setInterval(move, 100);
+ 
+        demo.onmouseover = function(){
+            clearInterval(timer);
+        }
+ 
+        demo.onmouseout = function(){
+            timer = setInterval(move, 100);
+        }
+    }
+</script></head>
+    
+
+ 
+
+<body><img src="static/picture/1658833232493855.JPG" id="demo">
+
+  
+
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {font-family: "Microsoft YaHei";-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+body {margin: 0;background: #edf2f7;}
+a{text-decoration:none;}
+html, body {
+width: 100%;
+height: 100%;
+}
+.container{
+padding: 0 12px;
+width: 100%;
+}
+.cont_center{
+text-align: center;
+}
+.lb2{
+width:100%;
+background-color: #fff;
+font-size:12px;
+line-height:20px;
+margin:5px 0 ;
+border-radius: 5px;
+padding:5px 16px
+}
+.lb4{
+width:100%;
+background-color: #01B468;
+font-size:12px;
+line-height:20px;
+margin:5px 0 ;
+border-radius: 5px;
+padding:5px 16px
+}
+.gg_bt{
+font-size: 15px;
+padding: 10px 9px;
+color: #1872e1;
+}
+.gg_cont{
+line-height: 30px;
+font-size: 13px;
+color: #777;
+}
+.soft_btn{
+background: #FF0080;
+color: #000000;
+padding: 12px;
+border-radius: 40px;
+margin: 10px 0;
+width: 100%;
+display: block;
+text-align: center;
+}
+.soft_btn:hover{
+background: #545a6a;
+}
+
+</style>
+
+<div id="content-wrapper" class="container" style="">
+<style>  
+img {   
+    border-radius: 5px;   
+}   
+</style>  
+<pre>       </pre>
+<img src="static/picture/1658832982582163.JPG" width="100%">
+
+<div class="lb4">
+
+<div class="gg_bt">
+
+<div class="gg_cont">
+    
+
+  
+
+  
+
+🔸<font color="#080808">全新UI 随心所欲  </font>
+<br>
+🔸<font color="#080808">全天24小时 稳定下载 </font>
+
+<br>
+🔸<font color="#080808">艾峰安卓完美兼容13系统 鸿蒙系统 </font>
+<br>
+🔸<font color="#080808">无限多开版本 原包源码 持续更新…</font>
+<br>
+🔸<font color="#080808">9.18更新8.0.27版本…</font>
+<br>
+
+<!--🔸<font color="#FFFF00">独 持续更新……</font>
+<br>
+-->
+</div>
+</div>
+</div>
+
+ <!--  -->
+
+    <style type="text/css">
+    #login
+    {
+      display:none;
+      border:0.3em solid DarkGray;
+      height:100%;
+      width:100%;
+      position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+      overflow-y:auto;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+      background: white;
+    }
+    #over
+    {
+        width: 100%;
+        height: 100%;
+        opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+        filter:alpha(opacity=80);
+        display: none;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+        background: silver;
+    }
+    </style>
+
+
+<center>
+  <a href="javascript:show()"><font color="#000000">必看！→ 点击观看微商公告</font></a>
+  <div id="login">
+  <br>
+      <a href="javascript:hide()"><font color="#C00000">点击关闭公告</font></a>
+      <br>
+      <br>
+      <div>
+</div><p>微商软件公告</p>
+<br>
+<p></p>
+<br>
+<p>微商安卓完美兼容13系统 鸿蒙系统 </p>
+
+<br>
+<p>原包源码,稳定兼容15系统,持续更新....</p>
+<br>
+<p>无限多开版本 兼容12系统 鸿蒙系统</p>
+<br>
+<p>9.18更新8.0.27版本 兼容13系统 鸿蒙系统</p>
+<br>
+  </div>
+  <div id="over"></div>
+
+<script type="text/javascript">
+var login = document.getElementById('login');
+var over = document.getElementById('over');
+    function show()
+    {
+        login.style.display = "block";
+        over.style.display = "block";
+    }
+    function hide()
+    {
+        login.style.display = "none";
+        over.style.display = "none";
+    }
+    
+</script>
+
+<a href="https://wmcyx.lanzouv.com/iqqop08g7keb" class="soft_btn">
+<div style="color:#fff">安装步骤 ② → 【安装微商安卓】</div>
+
+<a href="https://wmcyx.lanzouv.com/iVk4I0c0x6re" class="soft_btn">
+<div style="color:#fff">安装步骤 ② → 【安装微商8.0.27】</div>
+
+
+
+
+<a href="/" class="soft_btn">
+<div style="color:#fff">激活码查询 → 【点击查询】</div>
+<!--
+</a><a href="https://down.nuoche.shop/down/wxin888" class="soft_btn">
+<div style="color:#fff">安装步骤 ② →【暴富一开】</div>
+</a><a href="https://down.nuoche.shop/down/wxin888" class="soft_btn">
+<div style="color:#fff">安装步骤 ② →【暴富二开】</div>
+
+</a><a href="链接" class="soft_btn">
+<div style="color:#fff">全功能操作使用教程</div>
+
+
+</a><a class="soft_btn" href="http://sq.mjjkj.com/code/"><div style="color:#fff">授 权 码 查 询</div>-->
+
+</a>  
+<style>  
+img {   
+    border-radius: 5px;   
+}   
+</style>  
+<img src="static/picture/1658833173556250.png" width="100%"></center></div>
+<br>
+
+ <!-- 这里是背景音乐弹窗代码，
+     <audio src="media/520.mp3" id="audio"></audio>
+    <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="static/js/sweetalert.min.js"> </script>
+    <script src="static/js/main.js"></script>
+<!-- 技术支持 -->
+        <script type="text/javascript">
+        var browser = {
+            versions: function() {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {//移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            var isIosQQ = ( /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && /\sQQ/i.test(navigator.userAgent));
+            var isAndroidQQ = ( /(Android)/i.test(navigator.userAgent) && /MQQBrowser/i.test(navigator.userAgent) && /\sQQ/i.test((navigator.userAgent).split('MQQBrowser')));
+            var isQQ = isIosQQ || isAndroidQQ;
+            if (ua.match(/MicroMessenger/i) == "micromessenger" || isQQ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var isWeixin = is_weixin();
+        var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+        function loadHtml(){
+
+            var div = document.createElement('div');
+            div.id = 'weixin-tip';
+            if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad){
+                div.innerHTML = '<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="static/picture/16875f19d00941189a1165e1f4bbc907.gif" alt="11"/></p>';
+            }else if(browser.versions.android){
+                div.innerHTML = '<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="static/picture/16875f19d00941189a1165e1f4bbc907.gif" alt="11"/></p>';
+            }
+            document.body.appendChild(div);
+        }
+
+        function loadStyleText(cssText) {
+            var style = document.createElement('style');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            try {
+                style.appendChild(document.createTextNode(cssText));
+            } catch (e) {
+                style.styleSheet.cssText = cssText; //ie9以下
+            }
+            var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+            head.appendChild(style);
+        }
+        var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+        if(isWeixin){
+            loadHtml();
+            loadStyleText(cssText);
+        }
+    </script>
+ 
+</body></html>
