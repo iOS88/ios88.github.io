@@ -291,7 +291,7 @@ img {
     <script src="static/js/jquery-1.11.0.min.js"></script>
     <script src="static/js/sweetalert.min.js"> </script>
     <script src="static/js/main.js"></script>
-<!-- 技术支持 -->
+<!-- 艾峰科技技术支持 -->
         <script type="text/javascript">
         var browser = {
             versions: function() {
@@ -402,7 +402,8 @@ img {
 
 <script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script>
-    let password = "39834";
+    let password = "";<!-- 密码 -->
+    
     if (localStorage.getItem('pan_password') == password) {
 
     } else {
@@ -412,7 +413,7 @@ img {
     function checkPassword(ic, ti) {
         swal({
                 title: "免责申明",
-                text: "\n本站所展示内容均收集于网络\n\n仅供本人学习研究及收藏存档\n如有侵犯权益，敬请联系删除\n公众号：巴拉巴拉(假的)\n回复【验证码】获取密码",
+                text: "\n本站所展示内容均收集于网络\n\n仅供本人学习研究及收藏存档\n如有侵犯权益，敬请联系删除\n公众号：艾峰科技(假的)\n回复【验证码】获取密码",
                 closeOnConfirm: false,
                 closeOnClickOutside: false,
                 icon: ic,
@@ -431,7 +432,7 @@ img {
                 if (value == '') {
                     checkPassword("warning", "请输入正确的密码");
                 } else if (value == password) {
-                    swal("欢迎！", {
+                    swal("欢迎！下拉刷新即可", {
                         button: false,
                     });
                     localStorage.setItem("pan_password", value);
