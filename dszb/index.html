@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>十一电视直播</title>
+		<meta name="keywords" content="电视直播">
+		<meta name="description" content="这是一个电视直播页">
+		<link rel="stylesheet" id="font-css" href="http://at.alicdn.com/t/font_2701600_loackf4ohps.css?meirifuli.net"
+			type="text/css" media="all">
+	</head>
+	<body>
+		<style>
+			a,
+			body,
+			div,
+			footer,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			header,
+			html,
+			i,
+			img,
+			menu,
+			nav,
+			p,
+			ul,
+			li {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+				list-style: none;
+			}
+
+			* {
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				-webkit-tap-highlight-color: transparent;
+				/* For some Androids */
+			}
+
+			*,
+			:after,
+			:before {
+				box-sizing: border-box;
+			}
+
+			a {
+				text-decoration: none;
+				color: #ffffff;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-webkit-tap-highlight-color: transparent;
+				outline: none;
+				transition: color .1s ease;
+			}
+
+			html {
+				overflow-x: hidden;
+				font-size: 62.5%;
+			}
+
+			html,
+			body {
+				position: relative;
+				height: 100%;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+
+			body {
+				font-family: "Microsoft Yahei", sans-serif;
+				font-size: 15px;
+				background-color: #f3f5f7;
+				color: #333;
+				background: url(img/bj.jpg);
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			header {
+				width: 100%;
+				height: 60px;
+				background-color: rgba(255, 255, 255, 1);
+			}
+
+			main {
+				width: 100%;
+				padding: 10px;
+			}
+
+			.max {
+				max-width: 750px;
+				margin: 0 auto;
+			}
+
+			.flex {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.flex-center {
+				justify-content: center !important;
+			}
+
+			.shadow {
+				background-color: #fff;
+			}
+
+			.header {
+				height: 60px;
+			}
+
+			.header h1 {
+				font-size: 18px;
+			}
+
+			.notice {
+				width: 100% !important;
+				margin: 0 auto 10px !important;
+				padding: 10px;
+				border-radius: 5px !important;
+				background-color: rgba(254, 168, 2, .15) !important;
+			}
+
+			.notice i {
+				font-size: 15px;
+				color: #FEA802;
+			}
+
+			.notice marquee {
+				width: calc(100% - 25px);
+			}
+
+			.notice h2 {
+				font-size: 15px;
+				color: #FEA802;
+			}
+
+			.app {
+				width: 100%;
+				padding: 15px 10px 10px;
+				margin: 0 auto 10px;
+				background-color: #fff;
+				border-radius: 5px;
+			}
+
+			.app-meta {
+				padding: 10px 0 25px;
+			}
+
+			.app-meta h1 {
+				font-size: 16px;
+				color: #000;
+			}
+
+			.app-meta h1 i {
+				font-size: 16px;
+				color: #06f;
+				margin: 0 5px 0 0;
+			}
+
+			.app-meta h2 {
+				font-size: 14px;
+				color: #999;
+			}
+
+			.app ul {
+				flex-wrap: wrap;
+				justify-content: flex-start !important;
+			}
+
+			.app-item {
+				width: calc(50% - 5px);
+				margin: 0 10px 15px 0;
+				padding: 10px;
+				background-color: #f3f5f7;
+				border-radius: 5px;
+				overflow: hidden;
+			}
+
+			.app-item img {
+				width: 26px;
+				height: 26px;
+				border-radius: 100%;
+				overflow: hidden;
+			}
+
+			.app-item h1 {
+				width: calc(100% - 56px);
+				font-size: 14px;
+				font-weight: bold;
+				color: #666;
+			}
+
+			.app-item i {
+				font-size: 20px;
+				color: #ccc;
+			}
+
+			.app-item:nth-child(2n) {
+				margin: 0 0 15px 0;
+			}
+		</style>
+		<header>
+			<div class="header max flex flex-center">
+				<h1>电视直播</h1>
+			</div>
+
+			<main class="max">
+				<!--公告-->
+				<div class="notice flex">
+					<i class="fan son-gonggao"></i>
+					<marquee>
+						<h2>祝您生活愉快！</h2>
+					</marquee>
+				</div>
+
+				<div id="jnkc" style="text-align: center;"></div>
+				<script>
+					setInterval("jnkc.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+				</script>
+
+				<div id="tp-weather-widget" style="text-align: center;"></div>
+				<script>
+					(function(a, h, g, f, e, d, c, b) {
+						b = function() {
+							d = h.createElement(g);
+							c = h.getElementsByTagName(g)[0];
+							d.src = e;
+							d.charset = "utf-8";
+							d.async = 1;
+							c.parentNode.insertBefore(d, c)
+						};
+						a["SeniverseWeatherWidgetObject"] = f;
+						a[f] || (a[f] = function() {
+							(a[f].q = a[f].q || []).push(arguments)
+						});
+						a[f].l = +new Date();
+						if (a.attachEvent) {
+							a.attachEvent("onload", b)
+						} else {
+							a.addEventListener("load", b, false)
+						}
+					}(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" +
+						parseInt((new Date().getTime() / 100000000).toString(), 10)));
+					window.SeniverseWeatherWidget('show', {
+						flavor: "slim",
+						location: "WX4FBXXFKE4F",
+						geolocation: true,
+						language: "zh-Hans",
+						unit: "c",
+						theme: "auto",
+						token: "6cc2a314-5422-4e9c-b3ad-7b9217f4e494",
+						hover: "enabled",
+						container: "tp-weather-widget"
+					})
+				</script>
+				<!--大板块-->
+				<main class="app">
+
+					<div class="logo" style="text-align: center;"><img
+							src="https://zry1.cn/wp-content/uploads/2022/07/logo-300x56.png" alt="" width="300"
+							height="56" class="alignnone size-medium wp-image-3051" /></div>
+					<div id="wrapper">
+						<h1 style="color: #ff9733; text-align: center;" id="what"></h1>
+					</div>
+					<h1></h1>
+					&nbsp;
+
+					&nbsp;
+					<div id="wrapper">
+						<h1 style="text-align: center;"><span style="color: #ff0000;"><strong><input type="button"
+										value="开始随机选" id="start" /></strong></span></h1>
+					</div>
+					<textarea rows="9" cols="53" id="list"
+						style="display: none;">馄饨 拉面 烩面 热干面 刀削面 油泼面 炸酱面 炒面 重庆小面 米线 酸辣粉 土豆粉 螺狮粉 凉皮儿 麻辣烫肉夹馍 羊肉汤 炒饭 盖浇饭 卤肉饭 烤肉饭 黄焖鸡米饭 驴肉火烧 川菜 麻辣香锅 火锅 酸菜鱼 烤串 披萨 烤鸭 汉堡 炸鸡 寿司 蟹黄包 粽子 煎饼果子 生煎 炒年糕 盖浇饭 砂锅 大排档 米线 满汉全席 西餐 麻辣烫 自助餐 炒面 快餐 水果 西北风 馄饨 火锅 烧烤 泡面 速冻水饺 日本料理 涮羊肉 味千拉面 肯德基 面包 扬州炒饭 自助餐 茶餐厅 海底捞 咖啡 比萨 麦当劳 兰州拉面 沙县小吃 烤鱼 海鲜 铁板烧 韩国料理 奥利给 甜筒 不吃 粥 快餐 东南亚菜 甜点 农家菜 川菜 粤菜 湘菜 本帮菜 竹笋烤肉</textarea>
+					<script type='text/javascript' src='img/jquery-1.11.1.min.js'></script>
+					<script>
+						$(function() {
+							var run = 0,
+								timer;
+
+							$("#start").click(function() {
+								var list = $("#list").val().replace(/ +/g, " ").replace(/^ | $/g, "").split(" ");
+								if (!run) {
+									$(this).val("停止");
+									timer = setInterval(function() {
+										var r = Math.ceil(Math.random() * list.length),
+											food = list[r - 1];
+										$("#what").html(food);
+										var rTop = Math.ceil(Math.random() * $(document).height()),
+											rLeft = Math.ceil(Math.random() * ($(document).width() - 50)),
+											rSize = Math.ceil(Math.random() * (37 - 14) + 14);
+										$("<span class='temp'></span>").html(food).hide().css({
+											"top": rTop,
+											"left": rLeft,
+											"color": "rgba(0,0,0,." + Math.random() + ")",
+											"fontSize": rSize + "px"
+										}).appendTo("body").fadeIn("slow", function() {
+											$(this).fadeOut("slow", function() {
+												$(this).remove();
+											});
+										});
+									}, 50);
+									run = 1;
+								} else {
+									$(this).val("不行，换一个");
+									clearInterval(timer);
+									run = 0;
+								};
+							});
+
+							document.onkeydown = function enter(e) {
+								var e = e || event;
+								if (e.keyCode == 13) $("#start").trigger("click");
+							};
+						});
+
+						$i = 0;
+						$('#start').click(function() {
+							$i++;
+							if ($i >= 10) {
+								$('#start').hide();
+								$('#what').html('这么挑？饿着吧！');
+							}
+						})
+					</script>
+					<!--tm-->
+					<script type="text/javascript">
+						window.onload = function() {
+							showTime();
+						}
+
+						function showTime() {
+							var now = new Date();
+							var year = now.getFullYear();
+							document.getElementById("show").innerHTML = "" + year;
+							t = setTimeout('showTime()', 1000)
+						}
+					</script>
+					<!--pb-->
+					<script>
+						document.oncontextmenu = function(event) {
+							if (window.event) {
+								event = window.event;
+							}
+							try {
+								var the = event.srcElement;
+								if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
+									return false;
+								}
+								return true;
+							} catch (e) {
+								return false;
+							}
+						}
+					</script>
+					<script>
+						document.onkeydown = function() {
+
+							if (window.event && window.event.keyCode == 123) {
+								alert("Hi,欢迎来到十一电视直播！");
+								event.keyCode = 0;
+								event.returnValue = false;
+							}
+							if (window.event && window.event.keyCode == 13) {
+								window.event.keyCode = 505;
+							}
+							if (window.event && window.event.keyCode == 8) {
+								alert(str + "\n请使用Del键进行字符的删除操作！");
+								window.event.returnValue = false;
+							}
+						}
+					</script>
+					<script type="text/javascript">
+						if (self == top) {
+							var theBody = document.getElementsByTagName('body')[0];
+							theBody.style.display = "block";
+						} else {
+							top.location = self.location;
+						}
+					</script>
+
+				</main>
+				<main class="app">
+					<div class="app-meta flex">
+						<h1><i class="fan son-xing"></i>中央卫视</h1>
+						<h2></h2>
+					</div>
+					<ul class="flex">
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-1/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-1</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-3/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-3</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-5/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-5</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-5-plus/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-5+</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-6/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-6</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-7/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-7</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-9/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-9</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-10/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-10</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-11/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-11</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-12/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-12</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-13/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-13</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank"
+								href="http://media.hndyjyfw.gov.cn/live/jz-cctv-14/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/cc.jpg">
+								<h1 class="app-item-title">CCTV-14</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+					</ul>
+				</main>
+				<!--大板块-->
+				<main class="app">
+					<div class="app-meta flex">
+						<h1><i class="fan son-xing"></i>地方卫视</h1>
+						<h2>直播！</h2>
+					</div>
+					<ul class="flex">
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-hunanweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">湖南卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-jiangsuweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">江苏卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-anhuiweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">安徽卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-zhejiangweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">浙江卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-shenzhenweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">深圳卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-chongqingweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">重庆卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-beijingnweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">北京卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-shanghaiweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">上海卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-jinyingkatong/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">金鹰卡通</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-hnweishi-gq/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">河南卫视</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+						
+						<li class="app-item">
+							<a class="flex" target="_blank" href="http://media.hndyjyfw.gov.cn/live/jz-henanwenwu/live.m3u8"
+								rel="bookmark">
+								<img class="app-item-img" src="img/dianfei.png">
+								<h1 class="app-item-title">河南文物</h1>
+								<i class="fan son-you"></i>
+							</a>
+						</li>
+					</ul>
+				</main>
+				<main class="app">
+					<div class="app-meta flex">
+						<h1><i class="fan son-xing"></i>音乐</h1>
+						<h2>Music</h2>
+					</div>
+
+					<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+					<script>
+						LA.init({
+							id: "JeluOJqXnHG5L12c",
+							ck: "JeluOJqXnHG5L12c"
+						})
+					</script>
+
+					<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8"
+						src="https://v6-widget.51.la/v6/JeluOJqXnHG5L12c/quote.js?theme=#1690FF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&col=true&f=14&display=0,0,0,1,0,1,1,1">
+					</script><br>
+					<!--音乐代码-->
+					<p style="text-align: center;"><iframe width="330" height="86" frameborder="no" border="0"
+							marginwidth="0" marginheight="0"
+							src="//music.163.com/outchain/player?type=2&amp;id=1399112638&amp;auto=1&amp;height=66"></iframe>
+					</p>
+					<!--音乐结束-->
+					</ul>
+				</main>
+
+				<!-- 统计开端 -->
+				<div style="display:none">
+					<script type="text/javascript">
+						document.write(unescape(
+							"%3Cspan id='cnzz_stat_icon_1279645265'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279645265' type='text/javascript'%3E%3C/script%3E"
+							));
+					</script>
+				</div>
+				<!-- 统计完毕-->
+
+		</header>
+	</body>
+</html>
