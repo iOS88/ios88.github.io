@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="./js/mz.js"></script>
+	</head>
+	<body class="login-body">
+		<div>
+			<p class="login-tz">今日党建</p>
+			<p class="login-tz2">——道阻且长,行则将至</p>
+			<div class="zhuce">
+				<div class="input-1">
+					<p class="zhuce-p">账号&nbsp;|</p>
+				</div>
+				<div>
+					<input type="text" name="text" id="zh" class="input-2">
+				</div>
+			</div>
+			<div class="mima">
+				<div class="input-1">
+					<p class="zhuce-p">密码&nbsp;|</p>
+				</div>
+				<div>
+					<input type="password" name="password" id="pwd" class="input-2">
+				</div>
+			</div>
+
+			<div class="show-login-btndl">
+				注册
+			</div>
+			<div class="show-login-btndl-dl">
+				<a href="dl/tzs.html"></a>登录
+			</div>
+		</div>
+		<div>
+
+			<div class="login-box">
+				<div class="hide-login-btn">
+					+
+				</div>
+				<form  class="login-form">
+					<h1>注册</h1><br />
+					<table class="table-center">
+						<tr>
+							<td class="input-inp-2">
+								<div class="zhuce-k">
+									<p class="zhuce-p">姓名：</p>
+								</div>
+							</td>
+							<td>
+								<div>
+									<input class="input-inp-2" type="text" id="xm" name="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="input-inp-2">
+									<p class="zhuce-p">班级：</p>
+								</div>
+							</td>
+							<td>
+								<input class="input-inp-2" type="text" id="bj" name="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="input-inp-2">
+									<p class="zhuce-p">系别：</p>
+								</div>
+							</td>
+							<td>
+								<input class="input-inp-2" type="text" id="xb" name="" placeholder="" />
+							</td>
+						</tr>
+						<tr>
+							<td class="input-inp-2">
+								<div>
+									<p class="zhuce-p">手机号：</p>
+								</div>
+							</td>
+							<td>
+								<div>
+									<input class="input-inp-2" type="number" maxlength="13" id="sjh" name=""
+										placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-inp-2">
+								<div>
+									<p class="zhuce-p">职位：</p>
+								</div>
+							</td>
+							<td>
+								<div>
+									<input class="input-inp-2" type="text" name="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-inp-2">
+								<div>
+									<p class="zhuce-p">登录密码：</p>
+								</div>
+							</td>
+							<td>
+								<div>
+									<input class="input-inp-2" type="text" id="pwd2" name="" placeholder="" />
+								</div>
+							</td>
+						</tr>
+
+					</table>
+						<button  class="login-btn" type="button" name="" value="注册" onclick="" >注册</button>
+			</div>
+
+			</form>
+			<script>
+				document.getElementById("xm").style.fontSize = "30px";
+				document.getElementById("bj").style.fontSize = "30px";
+				document.getElementById("xb").style.fontSize = "30px";
+				document.getElementById("sjh").style.fontSize = "30px";
+				document.getElementById("pwd2").style.fontSize = "30px";
+			</script>
+			<script>
+				function isPhoneNum(str) {
+				                return /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(str)
+				            }
+				 if ($('#sjh').val()!="") 
+				 {
+				                  var Phonenumber = $('#sjh').val();
+				                    if (!isPhoneNum(Phonenumber))
+				                    {
+				                        layer.msg("手机号码输入不正确！")
+				                        $('#sjh').focus();
+				                        return false;
+				                    };       
+				      }
+			</script>
+			<script type="text/javascript">
+				function hasClass(element, clssname) {
+					return element.className.match(new RegExp('(\\s|^)' + clssname + '(\\s|$)'))
+				}
+
+				function addClass(element, clssname) {
+					if (!this.hasClass(element, clssname)) element.className += ' ' + clssname
+				}
+
+				function removeClass(element, clssname) {
+					if (hasClass(element, clssname)) {
+						var reg = new RegExp('(\\s|^)' + clssname + '(\\s|$)')
+						element.className = element.className.replace(reg, ' ')
+					}
+				}
+
+				function toggleClass(element, clssname) {
+					if (hasClass(element, clssname)) {
+						removeClass(element, clssname)
+					} else {
+						addClass(element, clssname)
+					}
+				}
+				var loginBox = document.getElementsByClassName('login-box')
+				var showBtn = document.getElementsByClassName('show-login-btndl')
+				var hideBtn = document.getElementsByClassName('hide-login-btn')
+				showBtn[0].addEventListener('click', function() {
+					toggleClass(loginBox[0], 'showed')
+				})
+				hideBtn[0].addEventListener('click', function() {
+					toggleClass(loginBox[0], 'showed')
+				})
+			</script>
+	</body>
