@@ -1,0 +1,1258 @@
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 主体颜色 */
+:root {
+    --background-color: #409EFF;
+    --bgColor: #F4F4F4;
+    --text-deep: #494949;
+    --text-shallow: #727272;
+    --text-color-grey: #999999;
+    --deep-background: #f9f9f9;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #e4e4e4;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--background-color);
+    background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .2) 25%, transparent 0, transparent 50%, hsla(0, 0%, 100%, .2) 0, hsla(0, 0%, 100%, .2) 75%, transparent 0, transparent);
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+a:hover {
+    color: var(--background-color);
+}
+
+/* 背景颜色 */
+.bgColorWhite {
+    background-color: white;
+}
+
+.bgColorDefault {
+    background-color: var(--bgColor);
+}
+
+#loading {
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999999;
+    margin-top: 0px;
+    top: 0px;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    animation: loading-center-absolute 1s infinite;
+
+}
+
+.object {
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    float: left;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.object:nth-child(2n+0) {
+    margin-right: 0px;
+
+}
+
+#object_one {
+    animation: object_one 1s infinite;
+}
+
+#object_two {
+    animation: object_two 1s infinite;
+}
+
+#object_three {
+    animation: object_three 1s infinite;
+}
+
+#object_four {
+    animation: object_four 1s infinite;
+}
+
+@keyframes loading-center-absolute {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes object_one {
+    50% {
+        transform: translate(20px, 20px);
+    }
+}
+
+@keyframes object_two {
+    50% {
+        transform: translate(-20px, 20px);
+    }
+}
+
+@keyframes object_three {
+    50% {
+        transform: translate(20px, -20px);
+    }
+}
+
+@keyframes object_four {
+    50% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+/* 标题文字 */
+.textTop {
+    height: 35px;
+    background-color: #333;
+    color: #FFF;
+    line-height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 导航栏 */
+nav {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #FFF;
+}
+
+nav .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .content .nav {
+    position: relative;
+    display: flex;
+}
+
+nav .content .logo {
+    font-size: 30px;
+}
+
+nav .content ul {
+    display: flex;
+    font-size: 18px;
+}
+
+nav .content ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+nav .content ul li:hover {
+    color: var(--background-color);
+    margin-top: -3px;
+    border-bottom: 3px solid var(--background-color);
+}
+
+/* 轮播图 */
+.banner .swiper-slide {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 115px);
+}
+
+.banner .swiper-slide::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.2);
+}
+
+.banner .swiper-slide a img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    transition: all .5s;
+}
+
+.banner .swiper-slide img:hover {
+    transform: scale(1.1);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 轮播图文字部分 */
+.swiper-wrapper {
+    position: relative;
+}
+
+.swiper-slide .bannerText {
+    position: absolute;
+    z-index: 10;
+}
+
+.swiper-slide .bannerText>* {
+    color: #FFF;
+    text-align: left;
+}
+
+.swiper-slide .bannerText h1 {
+    width: 70vw;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+/* 打字机 */
+.swiper-slide .bannerText .typewriter {
+    width: 66vw;
+}
+.swiper-slide .bannerText .typewriter span.mark {
+    border-right: 2px solid white;
+    animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+.swiper-slide .bannerText p:nth-child(1) {
+    font-size: 20px;
+}
+
+.swiper-slide .bannerText p:last-child {
+    width: 110px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    background-color: var(--background-color);
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* 关于我们 */
+.aboutus {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    background-color: #FFF;
+}
+
+.aboutus .hd {
+    display: none;
+}
+
+.aboutus .abHd {
+    flex: 1;
+}
+
+.aboutus .abHd h1 {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    color: var(--background-color);
+    line-height: 340px;
+}
+
+.aboutus .abHd h1 span {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    opacity: .1;
+}
+
+.aboutus .adText {
+    flex: 1;
+    padding: 20px 50px 20px 20px;
+}
+
+.aboutus .adText h1 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.aboutus .adText h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    margin: 10px 0;
+    background-color: var(--background-color);
+    user-select: none;
+}
+
+.aboutus .adText p {
+    font-size: 16px;
+}
+
+/* 通用hd */
+.hd {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hd h1 {
+    font-size: 32px;
+    position: relative;
+    padding: 35px 0 60px;
+    color: var(--background-color);
+}
+
+.hd h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    margin: 10px auto;
+    background-color: var(--background-color);
+}
+
+.hd h1 span {
+    font-size: 38px;
+    position: absolute;
+    left: 46%;
+    top: 15px;
+    color: #000;
+    opacity: .1;
+    user-select: none;
+}
+
+/* 服务流程 */
+.service {
+    padding-bottom: 30px;
+}
+
+.service .seBd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.service .seBd .seBdBox {
+    display: flex;
+    align-items: center;
+    width: 330px;
+    height: 180px;
+    margin-bottom: 25px;
+    background-color: #FFF;
+    padding: 20px;
+    border-bottom: 5px solid var(--background-color);
+    box-shadow: 0px 0px 18px rgb(0 0 0 / 6%);
+}
+
+.service .seBd .seBdBox .seBdBoxIcon span {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    opacity: .2;
+}
+
+.service .seBd .seBdBox .seBdBoxIcon {
+    position: relative;
+}
+
+.service .seBd .seBdBox .seBdBoxIcon i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 70px;
+    font-weight: 500;
+    color: var(--background-color);
+}
+
+.service .seBd .seBdBox .seBdBoxText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.service .seBd .seBdBox .seBdBoxText h1 {
+    margin: 5px 0;
+    font-size: 26px;
+}
+
+.service .seBd .seBdBox .seBdBoxText p {
+    font-size: 17px;
+}
+
+/* 案例赏析 */
+.case {
+    padding-bottom: 25px;
+}
+
+.case .caseBd {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+
+.case .caseBd .caseBdBig {
+    position: relative;
+    overflow: hidden;
+    width: 510px;
+    height: 290px;
+}
+
+.case .caseBd .caseBdBig:nth-child(1),
+.case .caseBd .caseBdBig:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.case .caseBd .caseBdBig img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+/* 案例欣赏遮罩 */
+.case .caseBd .caseBdBigMask {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.case .caseBd .caseBdBigMask .caseBdBigMaskText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-999px);
+    width: 75%;
+    height: 58%;
+    background-color: rgba(0, 0, 0, .6);
+    margin: auto;
+    padding: 20px;
+}
+
+.case .caseBd .caseBdBigMask .caseBdBigMaskText h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.case .caseBd .caseBdBigMask .caseBdBigMaskText p {
+    color: rgba(255, 255, 255, .6);
+    font-size: 16px;
+}
+
+.case .caseBd .caseBdBigMask .caseBdBigMaskText a {
+    position: absolute;
+    top: 52px;
+    right: 35px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+/* 案例赏析鼠标悬停状态 */
+@keyframes move {
+    0% {
+        transform: translateX(-999px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.case .caseBd .caseBdBig:hover img {
+    transform: scale(1.1);
+}
+
+.case .caseBd .caseBdBig:hover .caseBdBigMask {
+    display: block;
+}
+
+.case .caseBd .caseBdBig:hover .caseBdBigMask .caseBdBigMaskText {
+    animation: move .3s ease-out forwards;
+}
+
+/* 核心成员 */
+.member {
+    padding-bottom: 35px;
+}
+
+.member .memberBd {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.member .memberBd .memberBdBox {
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+    height: 450px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 24px rgb(0 0 0 / 20%);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    transition: all .5s;
+}
+
+/* 遮罩 */
+.member .memberBd .memberBdBoxMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    width: 310px;
+    height: 310px;
+    padding: 25px;
+    transform: rotate(160deg);
+    /* 设置中心点为左下角 */
+    transform-origin: bottom right;
+    /* 变换效果 */
+    transition: all .5s;
+}
+
+.member .memberBd .memberBdBoxMask h2 {
+    font-size: 18px;
+    color: #FFF;
+    margin: 30px 5px 15px;
+}
+
+.member .memberBd .memberBdBoxMask span {
+    font-size: 16px;
+    color: #FFF;
+    opacity: .9;
+}
+
+/* 主体内容 */
+.member .memberBd .memberBdBox img {
+    width: 100%;
+    height: auto;
+}
+
+.member .memberBd .memberBdBox h1 {
+    font-size: 34px;
+    text-align: center;
+    margin: 10px auto;
+    color: var(--text-deep);
+}
+
+.member .memberBd .memberBdBox p {
+    font-size: 20px;
+    text-align: center;
+    color: var(--text-shallow);
+}
+
+.member .memberBd .memberBdBox i {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 88px;
+    font-weight: bold;
+    font-style: italic;
+    opacity: .1;
+    user-select: none;
+}
+
+.member .memberBd .memberBdBox:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0px 0px 36px rgb(0 0 0 / 10%);
+}
+
+.member .memberBd .memberBdBox:hover .memberBdBoxMask {
+    transform: rotate(0deg);
+
+}
+
+.member .memberBd .memberBdBox:hover i {
+    color: var(--background-color);
+}
+
+/* 公司新闻 */
+.navlist {
+    padding-bottom: 30px;
+}
+
+.navlist .navlistBd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navlist .navlistBd .navlistBdBox {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 150px;
+    background-color: var(--deep-background);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: all .5s;
+}
+
+.navlist .navlistBd .navlistBdBoxTime {
+    flex: 1;
+}
+
+.navlist .navlistBd .navlistBdBoxTitle {
+    flex: 2;
+    transition: all .3s;
+}
+
+.navlist .navlistBd .navlistBdBoxTime h1 {
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--text-color-grey);
+}
+
+.navlist .navlistBd .navlistBdBoxTime h1::after {
+    content: '';
+    position: absolute;
+    left: 99px;
+    top: 22px;
+    width: 38px;
+    height: 1px;
+    background-color: var(--text-color-grey);
+    transition: all .3s;
+}
+
+.navlist .navlistBd .navlistBdBoxTime span {
+    font-size: 30px;
+    color: var(--text-color-grey);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.navlist .navlistBd .navlistBdBoxTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navlist .navlistBd .navlistBdBoxTitle h1 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.navlist .navlistBd .navlistBdBoxTitle p {
+    font-size: 18px;
+}
+
+/* 公司新闻悬停动画 */
+.navlist .navlistBd .navlistBdBox:hover {
+    border-bottom: 3px solid var(--background-color);
+}
+
+.navlist .navlistBd .navlistBdBox:hover .navlistBdBoxTime h1 {
+    color: var(--background-color);
+    opacity: 0.7;
+}
+
+.navlist .navlistBd .navlistBdBox:hover .navlistBdBoxTime span {
+    padding: 6px 8px;
+    color: #FFF;
+    border-radius: 3px;
+    background-color: var(--background-color);
+}
+
+.navlist .navlistBd .navlistBdBox:hover .navlistBdBoxTime h1::after {
+    width: 50px;
+}
+
+.navlist .navlistBd .navlistBdBox:hover .navlistBdBoxTitle {
+    transform: translateX(16px);
+}
+
+/* 查看更多 */
+.Seemore {
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--deep-background);
+    border-radius: 6px;
+    color: var(--text-deep);
+    font-size: 18px;
+}
+
+/* 图 */
+.chart {
+    position: relative;
+}
+
+.chart img {
+    width: 100%;
+}
+
+.chartText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.chartText h1 {
+    font-size: 52px;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.chartText a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #FFF;
+    text-align: center;
+    line-height: 48px;
+    margin: 0 40px;
+    font-size: 24px;
+    color: #FFF;
+}
+
+/* 底部 */
+footer {
+    padding-bottom: 30px;
+    background-color: #333;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 40px 50px;
+}
+
+.footer .forHelp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .forHelp dl {
+    margin-right: 40px;
+    line-height: 2.5;
+}
+
+.footer .forHelp dl dt {
+    font-size: 24px;
+    color: #FFF;
+}
+
+.footer .forHelp dl dd {
+    font-size: 14px;
+}
+
+.footer .forDetails {
+    display: flex;
+}
+
+.footer .forDetails dl {
+    line-height: 2.8;
+}
+
+.footer .forDetails i {
+    font-size: 18px;
+    vertical-align: sub;
+}
+
+
+.footer .forDetails dl dt {
+    font-size: 22px;
+    color: #FFF;
+}
+
+.footer .forDetails dl dd {
+    font-size: 14px;
+}
+
+.footer .forDetails dl dd img {
+    margin: 10px 20px 10px 0;
+}
+
+.FooterSeparate {
+    margin: 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.FooterSeparate .content {
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    margin-top: 15px;
+}
+
+.footerLogo {
+    width: 150px;
+    text-align: center;
+}
+
+.footrCopyright {
+    margin-left: 50px;
+    /* margin: 0 auto; */
+}
+
+.FooterSeparate .footerLogo h1 {
+    font-size: 20px;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.FooterSeparate .footrCopyright p {
+    font-size: 18px;
+}
+
+.FooterSeparate .footrCopyright a {
+    font-size: 18px;
+}
+
+/* goBack制作 */
+.goBack {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    width: 52px;
+    height: 56px;
+    border-radius: 6px;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+.goBack span {
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* 面包屑 */
+.crumbs {
+    margin: 15px auto;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.crumbs > * {
+    font-size: 16px;
+}
+
+.crumbs span {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+/* 网页适配 */
+@media screen and (max-width: 1100px) {
+    /* 取消移动端长按高亮背景显示 这里设置为透明 */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /*在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+    input {
+        -webkit-appearance: none;
+    }
+
+    /* 禁用长按页面时弹出的菜单 */
+    img,a {
+        -webkit-touch-callout: none;
+    }
+    
+    nav .content .nav {
+        display: none;
+    }
+
+    /* 汉堡按钮 */
+    .burger {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        display: block;
+        width: 20px;
+        height: 6px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .burger .top-line,
+    .burger .middle-line,
+    .burger .bottom-line {
+        width: 25px;
+        height: 2px;
+        background-color: var(--text-deep);
+    }
+
+    .burger .top-line {
+        position: absolute;
+        top: -6px;
+    }
+
+    .burger .middle-line {
+        width: 15px;
+    }
+
+    .burger .bottom-line {
+        position: absolute;
+        top: 6px;
+    }
+
+    /* 被点击以后的样式 */
+    header.open .top-line,
+    header.open .middle-line,
+    header.open .bottom-line {
+        transition: .4s ease;
+    }
+
+    /* 第一条线 */
+    header.open .top-line {
+        transform: rotate(45deg) translate(3px, 5px);
+    }
+
+    /* 第二条线 */
+    header.open .middle-line {
+        transform: translateX(5px);
+        opacity: 0;
+    }
+
+    /* 第三条线 */
+    header.open .bottom-line {
+        transform: rotate(-45deg) translate(3px, -5px);
+    }
+
+    /* nav样式 */
+    header.open nav .content .nav {
+        position: relative;
+        display: block;
+        z-index: 999;
+        width: 100vw;
+        /* height: calc(100vh - 92px); */
+        margin-top: -1px;
+        background-color: #FFF;
+        /* 下滑效果 */
+        animation: slideDown .6s ease-in-out forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            width: 0;
+            height: 0;
+        }
+
+        to {
+            height: 100vh;
+            padding-left: 20px;
+            opacity: 1;
+        }
+    }
+
+    nav .content {
+        display: block;
+    }
+
+    header.open nav .content .nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.open nav .content .nav>* {
+        font-size: 18px;
+        color: var(--text-shallow);
+        opacity: 0;
+        animation: showMenu 0.5s linear forwards 0.4s;
+    }
+
+    @keyframes showMenu {
+        from {
+            opacity: 0;
+            transform: translateY(-1vh);
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* 文字适应 */
+    .textTop p {
+        font-size: 16px;
+        margin: 0 20px;
+    }
+
+
+
+    nav .content .logo {
+        font-size: 24px;
+        margin: 0 20px;
+    }
+
+    .swiper-slide .bannerText {
+        margin: 0 26px;
+    }
+
+    .swiper-slide .bannerText h1 {
+        font-size: 50px;
+    }
+
+    /* 案例赏析 */
+    .case .caseBd .caseBdBigMask .caseBdBigMaskText {
+        width: 80%;
+        height: 66%;
+    }
+
+    .case .caseBd .caseBdBigMask .caseBdBigMaskText a {
+        top: 38px;
+    }
+
+    /* 文字说明图 */
+    .chartText h1 {
+        font-size: 30px;
+    }
+
+    .chartText a {
+        width: 116px;
+        height: 35px;
+        margin: 0 16px;
+        line-height: 33px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    @import url(../css/normalize.css);
+
+    /* 关于我们Hd变化 */
+    .aboutus .abHd h1 {
+        font-size: 32px;
+        line-height: 100px;
+        margin-top: 35px;
+    }
+    
+    .aboutus .abHd h1 span {
+        top: -15px;
+    }
+
+    .swiper-slide .bannerText p:last-child {
+        width: 99px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .case .caseBd .caseBdBig {
+        height: auto;
+        margin: 10px;
+    }
+
+    /* 汉堡按钮位置 */
+    .burger {
+        top: 62px;
+    }
+
+    /* 小屏宽度下nav重载 */
+    .textTop {
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .textTop p {
+        font-size: 14px;
+    }
+
+    nav {
+        height: 66px;
+        line-height: 66px;
+    }
+
+    /* 轮播图高度重置 */
+    .banner .swiper-slide {
+        height: calc(100vh - 94px);
+    }
+
+    /* 轮播图边距重置 */
+    /* .swiper-slide .bannerText {
+        margin: 0 26px;
+    } */
+    .swiper-slide .bannerText h1 {
+        font-size: 26px;
+    }
+
+    
+
+    .aboutus {
+        flex-direction: column;
+    }
+
+    .aboutus .hd {
+        display: block;
+    }
+
+    /* 文字说明图 */
+    .chart img {
+        height: 60px;
+    }
+
+    .chartText h1 {
+        font-size: 18px;
+    }
+
+    .chartText a {
+        width: 125px;
+        font-size: 16px;
+        margin: 0 10px;
+        height: 32px;
+        line-height: 30px;
+    }
+
+    .navlist .navlistBd .navlistBdBoxTime h1::after {
+        display: none;
+    }
+
+    /* 底部 */
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer .forHelp {
+        flex-direction: column;
+    }
+    
+    .FooterSeparate .content h1 {
+        display: none;
+    }
+
+    .footerLogo {
+        width: 9.375rem;
+    }
+    
+    .footrCopyright {
+        margin: auto;
+    }
+
+    /* 公司新闻 */
+
+    .navlist .navlistBd .navlistBdBox {
+        height: 125px;
+        margin: 10px;
+    }
+
+    .navlist .navlistBd .navlistBdBoxTime h1,
+    .navlist .navlistBd .navlistBdBoxTime span {
+        font-size: 26px;
+    }
+
+    .navlist .navlistBd .navlistBdBoxTitle h1 {
+        font-size: 20px;
+    }
+
+    .navlist .navlistBd .navlistBdBoxTitle p {
+        font-size: 16px;
+    }
+
+    .Seemore {
+        width: 150px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+
+    /* 底部 */
+
+    .FooterSeparate {
+        margin: 0 10px;
+    }
+
+    .FooterSeparate .footrCopyright p,
+    .FooterSeparate .footrCopyright a {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hd h1 span {
+        left: 33%;
+    }
+
+    .goBack {
+        width: 45px;
+        height: 45px;
+        right: 20px;
+        bottom: 50px;
+    }
+
+    .goBack span {
+        font-size: 30px;
+    }
+}
