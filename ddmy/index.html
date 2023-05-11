@@ -1,0 +1,252 @@
+<!-- 
+拾忆网络提供
+联系QQ：1042566151
+ -->
+<html style="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>正在加载官网</title>
+
+
+
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+		<meta name="renderer" content="webkit">
+
+		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+
+
+		<style id="AlookElementHide">
+			.MDQxNQ,
+			#appss,
+			.show-app2,
+			bkveng,
+			#ppaxs,
+			[class*="ad_img"],
+			[class*="ad_head"],
+			[class*="ad_foot"],
+			[class*="ad_thread"],
+			[id*="ad_img"],
+			[id*="ad_head"],
+			[id*="ad_foot"],
+			[id*="ad_thread"],
+			.AlookElementHide {
+				display: none !important;
+				height: 0px !important;
+				line-height: 0px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box" style="">
+
+			<div class="logo">
+
+				<img src="./style/logo.gif" width="100">
+			</div>
+
+			<div class="tip">
+
+				<small style="">
+
+					<div class="ipinfo">
+
+						<b id="cip"></b>
+						<span id="cname"></span>
+					</div>
+
+					<div>
+
+						<h3>
+							<b>
+								<font color="#FF0000">系统正在加载官网</font>
+							</b>
+						</h3>
+					</div>
+
+					<hr>
+
+					<div>
+						进度条如果不动并非卡顿
+						而是在加载数据<br><b>请耐心等待</b>
+					</div>
+				</small>
+			</div>
+
+			<div class="progress">
+
+				<div id="progress-bar" class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+					aria-valuemax="100" style="width: 123.333%;">
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var url = '1.html'; //此处修改要跳转的网址
+			var time = 3 * 1000;
+			var jindu = 100 / (time / 100);
+			var n = 0;
+
+			function progress(p) {
+				document.getElementById("progress-bar").style.width = p + "%"
+			}
+			var sss = setInterval(
+				function() {
+					progress(jindu * n);
+					if ((jindu * n) > 100 + (jindu * 6)) {
+						clearInterval(sss)
+						window.location.href = url;
+					}
+					n++
+
+				}, 100);
+		</script>
+
+		<style>
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				line-height: 1.42857143;
+				color: #333;
+				background-color: #fff;
+				margin: 0
+			}
+
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box
+			}
+
+			.box {
+				left: 50%;
+				top: 30%;
+				width: 300px;
+				margin-left: -150px;
+				height: 200px;
+				bottom: 10px;
+				padding: 10px;
+				word-break: break-all;
+				position: fixed
+			}
+
+			.logo {
+				text-align: center;
+				margin-bottom: 20px
+			}
+
+			.tip {
+				text-align: center;
+				margin-bottom: 15px;
+				letter-spacing: 1px
+			}
+
+			.progress {
+				height: 20px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				background-color: #f5f5f5;
+				border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+				height: 8px
+			}
+
+			.progress-bar {
+				float: left;
+				width: 0%;
+				height: 100%;
+				font-size: 12px;
+				line-height: 20px;
+				color: #fff;
+				text-align: center;
+				background-color: #337ab7;
+				-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+				box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+				-webkit-transition: width .6s ease;
+				-o-transition: width .6s ease;
+				transition: width .6s ease
+			}
+
+			.progress-bar-success {
+				background-color: #5cb85c
+			}
+		</style>
+
+
+		<script type="text/javascript">
+			var browser = {
+				versions: function() {
+					var u = navigator.userAgent,
+						app = navigator.appVersion;
+					return { //移动终端浏览器版本信息
+						trident: u.indexOf('Trident') > -1, //IE内核
+						presto: u.indexOf('Presto') > -1, //opera内核
+						webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+						gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+						mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+						android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+						iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+						iPad: u.indexOf('iPad') > -1, //是否iPad
+						webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+					};
+				}(),
+				language: (navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+
+			function is_weixin() {
+				var ua = navigator.userAgent.toLowerCase();
+				var isIosQQ = (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && /\sQQ/i.test(navigator.userAgent));
+				var isAndroidQQ = (/(Android)/i.test(navigator.userAgent) && /MQQBrowser/i.test(navigator.userAgent) && /\sQQ/i
+					.test((navigator.userAgent).split('MQQBrowser')));
+				var isQQ = isIosQQ || isAndroidQQ;
+				if (ua.match(/MicroMessenger/i) == "micromessenger" || isQQ) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			var isWeixin = is_weixin();
+			var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement
+			.clientHeight;
+
+			function loadHtml() {
+
+				var div = document.createElement('div');
+				div.id = 'weixin-tip';
+				if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+					div.innerHTML =
+						'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="尚洪网络科技，技术支持"/></p>';
+				} else if (browser.versions.android) {
+					div.innerHTML =
+						'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="尚洪网络科技，技术支持"/></p>';
+				}
+				document.body.appendChild(div);
+			}
+
+			function loadStyleText(cssText) {
+				var style = document.createElement('style');
+				style.rel = 'stylesheet';
+				style.type = 'text/css';
+				try {
+					style.appendChild(document.createTextNode(cssText));
+				} catch (e) {
+					style.styleSheet.cssText = cssText; //ie9以下
+				}
+				var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+				head.appendChild(style);
+			}
+			var cssText =
+				"#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+			if (isWeixin) {
+				loadHtml();
+				loadStyleText(cssText);
+			}
+		</script>
+	</body>
+</html>

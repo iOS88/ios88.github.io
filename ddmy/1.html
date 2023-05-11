@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多多密友官网</title>
+		<link rel="stylesheet" href="./css/css.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="app">
+			<!-- <div class="banner"><img src="./img/shiyi.jpg" alt=""></div> -->
+			<div style="padding-top: 50px;"></div>
+			<nav class="grnav">
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td><span class="bt">安全稳定</span></td>
+							<td><span class="bt">超强防封</span></td>
+							<td><span class="bt">源包源码</span></td>
+							<td><span class="bt">杜绝封号</span></td>
+							<td><span class="bt">诚邀品鉴</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</nav>
+			<div class="guo">
+				<marquee behavior="" direction="">独家8030密友，内置iPad登录，更好的保护您的隐私</marquee>
+			</div>
+			<div class="gg_cont">
+				<br>
+				♥<font color="#ffffff">完美兼容Android13&鸿蒙系统</font>♥
+				<br><br>
+				♥<font color="#ffffff">24小时后台通知(自动开启省电模式)</font>♥
+				<br>
+				<br>
+			</div>
+			<div class="left">
+				<a href="./img/tu1.jpg"><img src="./style/xc.jpg" alt=""></a>
+			</div>
+
+			<div class="right">
+				<div class="button">
+					<a href="https://wwxd.lanzoue.com/iwdqD0naiuda">卸官微版本</a>
+				</div>
+				<div class="button">
+					<a href="https://wwxd.lanzoue.com/i963y0naiije">多多密友①</a>
+				</div>
+				<div class="button">
+					<a href="https://wwxd.lanzoue.com/itGMt0nai7nc">多多密友②</a>
+				</div>
+				<div class="button">
+					<a href="https://wwxd.lanzoue.com/iH2sn0nai0xa">多多密友③</a>
+				</div>
+				<div class="button">
+					<a href="https://wwxd.lanzoue.com/iRtq60nahsba">多多密友④</a>
+				</div>
+
+				<div class="button">
+					<a href="http://input.hyhuo.com/hy-upload/2023/0120/d5fe62dc220dd19c2fa8ec971e64e1ac/d5fe62dc22.mp4">教程</a>
+				</div>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		var browser = {
+			versions: function() {
+				var u = navigator.userAgent,
+					app = navigator.appVersion;
+				return { //移动终端浏览器版本信息
+					trident: u.indexOf('Trident') > -1, //IE内核
+					presto: u.indexOf('Presto') > -1, //opera内核
+					webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+					mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+					iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+					iPad: u.indexOf('iPad') > -1, //是否iPad
+					webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+				};
+			}(),
+			language: (navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+
+		function is_weixin() {
+			var ua = navigator.userAgent.toLowerCase();
+			var isIosQQ = (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && /\sQQ/i.test(navigator.userAgent));
+			var isAndroidQQ = (/(Android)/i.test(navigator.userAgent) && /MQQBrowser/i.test(navigator.userAgent) && /\sQQ/i
+				.test((navigator.userAgent).split('MQQBrowser')));
+			var isQQ = isIosQQ || isAndroidQQ;
+			if (ua.match(/MicroMessenger/i) == "micromessenger" || isQQ) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		var isWeixin = is_weixin();
+		var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement
+			.clientHeight;
+
+		function loadHtml() {
+
+			var div = document.createElement('div');
+			div.id = 'weixin-tip';
+			if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+				div.innerHTML =
+					'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="梵高团队出品"/></p>';
+			} else if (browser.versions.android) {
+				div.innerHTML =
+					'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="梵高团队出品"/></p>';
+			}
+			document.body.appendChild(div);
+		}
+
+		function loadStyleText(cssText) {
+			var style = document.createElement('style');
+			style.rel = 'stylesheet';
+			style.type = 'text/css';
+			try {
+				style.appendChild(document.createTextNode(cssText));
+			} catch (e) {
+				style.styleSheet.cssText = cssText; //ie9以下
+			}
+			var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+			head.appendChild(style);
+		}
+		var cssText =
+			"#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+		if (isWeixin) {
+			loadHtml();
+			loadStyleText(cssText);
+		}
+	</script>
+</html>
