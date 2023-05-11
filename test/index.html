@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<title>温馨提示</title>
+		<style>
+			body {
+				text-align: center;
+				margin: 0;
+				font-size: 16px;
+				padding-top: 30%;
+			}
+
+			.topinfo {
+				background: #08f;
+				color: #fff;
+				width: 80px;
+				margin: auto;
+				margin-bottom: 10px;
+				height: 80px;
+				border-radius: 50%;
+				line-height: 80px;
+				font-size: 50px;
+			}
+
+			.finfo {
+				font-size: 18px;
+				font-weight: bold;
+				color: red;
+				letter-spacing: 2px;
+			}
+
+			.sid {
+				color: white;
+				font-size: 22px;
+				font-weight: bold;
+				padding-top: 10px;
+				text-align: center;
+			}
+
+			.sbtn {
+				background-color: #08f;
+				padding: 5px;
+				border-radius: 10px;
+			}
+
+			@font-face {
+				font-family: 'MyFontNameMk';
+				/*src:url('/public/wg/13.woff2');*/
+			}
+		</style>
+	</head>
+	<body style="font-family:MyFontNameMk">
+
+		<div class="one one2" style="text-align: center; display: block;">
+			<div class="topinfo">!</div>
+			<div class="finfo">
+				微信内无法打开链接 <br>请复制链接在浏览器访问
+			</div>
+			<br>
+			<div class="sid">
+				<input class="sbtn wxcopy" type="button" value="点我复制链接" />
+			</div>
+			<div style="display: none;"></div>
+
+
+		</div>
+
+		<div class="one one3" style="text-align: center;display: none">
+			<div class="finfo">
+				正在安全跳转...
+			</div>
+		</div>
+
+
+		<script src="./js2/jquery-2.1.1.min.js"></script>
+		<script src="./js2/clipboard.min.js"></script>
+		<script>
+			function getPar(par) {
+				//获取当前URL
+				var local_url = document.location.href;
+				//获取要取得的get参数位置
+				var get = local_url.indexOf(par + "=");
+				if (get == -1) {
+					return false;
+				}
+				//截取字符串
+				var get_par = local_url.slice(par.length + get + 1);
+				//判断截取后的字符串是否还有其他get参数
+				var nextPar = get_par.indexOf("&");
+				if (nextPar != -1) {
+					get_par = get_par.slice(0, nextPar);
+				}
+				return get_par;
+			}
+			
+			 $(function() {
+				var ua = navigator.userAgent.toLowerCase();
+				if (ua.match(/MicroMessenger/i) == "micromessenger") {
+					isWeixin = true;
+				} else {
+					isWeixin = false;
+				}
+				if (!isWeixin) {
+					$('.one3').css('display', 'block');
+					setTimeout(function() {
+						window.location.href = "https://www.yttspc.bar?invite=" + getPar('invite');
+					}, 2000);
+					return;
+				} else {
+					$('.one2').css('display', 'block');
+					return;
+
+				}
+			}) 
+
+
+			var clipboard = new ClipboardJS('.wxcopy', {
+				text: function() {
+					return "https://www.yytspc.bar?invite=" + getPar('invite');
+				}
+			});
+
+			clipboard.on('success', function(e) {
+				console.log(e);
+				alert("已复制,请在浏览器打开！");
+
+			});
+		</script>
+
+		<textarea readonly=""
+			style="font-size: 12pt; border: 0px; padding: 0px; margin: 0px; position: absolute; left: -9999px; top: 0px;"></textarea>
+	</body>
+</html>
