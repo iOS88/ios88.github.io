@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <style>
+        .y404 {
+            margin: 50px auto;
+            text-align: center;
+        }
+        .y404 img {
+            display: block;
+            width: 300px;
+            height: auto;
+            margin: 10px auto;
+        }
+        .y404 h1 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #666;
+        }
+        .y404 span {
+            font-size: 16px;
+            margin: 10px auto;
+            color: #999;
+        }
+        .y404 a {
+            display: block;
+            text-decoration: none;
+            width: 170px;
+            height: 50px;
+            text-align: center;
+            margin: 20px auto;
+            line-height: 50px;
+            color: #FFF;
+            border-radius: 3px;
+            background-color: #27cb8b;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="y404">
+        <img src="./images/404.png" alt="">
+        <h1>过客科技有限公司提醒您：您要查看的页面不存在或已删除！</h1>
+        <span>您可以手动返回或者等待 <span id="times"></span> 秒自动返回首页</span>
+        <a href="index.html">返回首页</a>
+    </div>
+    <script>
+        // 页面5秒后自动跳转
+        setTimeout(function() {
+            window.location.href = 'index.html'
+        },5000);
+        // 数字自动变化
+        function time() {
+            var times = document.querySelector('#times');
+            var timer = 5;
+            setInterval(function(){
+                if (timer == 0) {
+                    times.innerHTML = 5;
+                } else {
+                    times.innerHTML = timer;
+                    timer--;
+                }
+            },1000);
+        }
+        time();
+    </script>
+</body>
+</html>

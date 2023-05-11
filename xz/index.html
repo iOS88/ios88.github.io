@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<script src="./js/inedx.js"></script>
+		<link rel="stylesheet" href="./css/base.css">
+		<link rel="stylesheet" href="./font/iconfont.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+		<script type="text/javascript" src="./css/tx.js"></script>
+		<title>服务创作价值</title>
+		<meta name="Description" content="喜忠畜牧筛草机制作、农机修理">
+		<meta name="keywords" content="喜忠畜牧筛草机制作、农机修理">
+	</head>
+
+	<body>
+		<!-- 页面加载 -->
+		<div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_four"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部区域 -->
+		<header>
+			<!-- 顶部介绍 -->
+			<div class="textTop">
+				<div class="content">
+					<p>您好！欢迎光临！</p>
+				</div>
+			</div>
+			<!-- 导航栏 -->
+			<nav>
+				<div class="content">
+					<div class="logo">服务创造价值</div>
+					<!-- 汉堡按钮 -->
+					<div class="burger">
+						<div class="top-line"></div>
+						<div class="middle-line"></div>
+						<div class="bottom-line"></div>
+					</div>
+					<!-- 导航栏 -->
+					<div class="nav">
+						<ul>
+							<li><a>首页</a></li>
+							<li><a href="about.html">关于我们</a></li>
+							<li><a href="anli.html">成功案例</a></li>
+							<li><a href="lianxi.html">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- 轮播图 -->
+		<div class="banner">
+			<!-- Swiper -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="bannerText">
+							<!-- 文字容器，统一由h1控制 -->
+							<h1 class="typewriter">
+								<!-- 使用span显示文字, data-text为Json格式的数组 -->
+								<span id="text" data-text='["畜牧电动筛草机制作", "农机修理", "让畜牧业以及农机起航的地方"]'></span>
+								<!-- 闪烁的光标 -->
+								<span class="mark"></span>
+							</h1>
+							<p>服务创造价值</p>
+							<p><a href="about.html">立即查看</a></p>
+							
+						</div>
+						
+						<a href="">
+							<img src="./images/banner.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<div class="bannerText">
+							<h1>农机修理</h1>
+							<p>服务创造价值</p>
+							<p>立即查看</p>
+						</div>
+						<a href="">
+							<img src="./images/banner01.jpg" alt="">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<div class="bannerText">
+							<h1>畜牧电动筛草机制作</h1>
+							<p>服务创造价值</p>
+							<p>立即查看</p>
+						</div>
+						<a href="">
+							<img src="./images/banner03.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<script src="./js/animate.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				/* autoplay: {
+				    delay: 5000,//5秒切换一次
+				}, */
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			});
+		</script>
+		<script>
+		    (function () {
+		        var a_idx = 0;
+		        window.onclick = function (event) {
+		            var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+		                "❤敬业❤", "❤诚信❤", "❤友善❤");
+		            var heart = document.createElement("b"); //创建b元素
+		            heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+		
+		            document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+		            a_idx = (a_idx + 1) % a.length;
+		            heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+		
+		            var f = 13, // 字体大小
+		                x = event.clientX - f / 2 - 30, // 横坐标
+		                y = event.clientY - f, // 纵坐标
+		                c = randomColor(), // 随机颜色
+		                a = 1, // 透明度
+		                s = 0.8; // 放大缩小
+		
+		            var timer = setInterval(function () { //添加定时器
+		                if (a <= 0) {
+		                    document.body.removeChild(heart);
+		                    clearInterval(timer);
+		                } else {
+		                    heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+		                        c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+		                        s + ");";
+		
+		                    y--;
+		                    a -= 0.016;
+		                    s += 0.002;
+		                }
+		            }, 15)
+		        }
+		        // 随机颜色
+		        function randomColor() {
+		            return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+		                .random() * 255)) + ")";
+		        }
+		    }());
+		</script>
+	</body>
+<!-- 运行时间 -->
+					<center><span style="color:#ff0000"> 我们已经持续工作</span>
+						<span id="span_dt_dt" style="color: #228B22;">
+							<font style="color:#FF0000">621</font> 天 <font style="color:#FF0000">19
+							</font> 时 <font style="color:#FF0000">23</font> 分 <font style="color:#FF0000">51</font> 秒
+						</span>
+						<script language="javascript">
+							function show_date_time() {
+								window.setTimeout("show_date_time()", 1000);
+								BirthDay = new Date("7/01/2018 00:00:00");
+								today = new Date();
+								timeold = (today.getTime() - BirthDay.getTime());
+								sectimeold = timeold / 1000
+								secondsold = Math.floor(sectimeold);
+								msPerDay = 24 * 60 * 60 * 1000
+								e_daysold = timeold / msPerDay
+								daysold = Math.floor(e_daysold);
+								e_hrsold = (e_daysold - daysold) * 24;
+								hrsold = Math.floor(e_hrsold);
+								e_minsold = (e_hrsold - hrsold) * 60;
+								minsold = Math.floor((e_hrsold - hrsold) * 60);
+								seconds = Math.floor((e_minsold - minsold) * 60);
+								span_dt_dt.innerHTML = '<font style=color:#FF0000>' + daysold + '</font> 天 <font style=color:#FF0000>' +
+									hrsold + '</font> 时 <font style=color:#FF0000>' + minsold + '</font> 分 <font style=color:#FF0000>' +
+									seconds + '</font> 秒';
+							}
+							show_date_time();
+						</script>
+					</center>
+</html>
