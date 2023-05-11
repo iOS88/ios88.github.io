@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>小鸭子分身官网</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="robots" content="index,follow">
+		<style>
+			#nr {
+				font-size: 18px;
+				margin: 0;
+				background: -webkit-linear-gradient(left, #FF66FF, #99FF33 20.25%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-size: 200% 100%;
+				animation: masked-animation 10s infinite linear;
+			}
+
+			@keyframes masked-animation {
+				0% {
+					background-position: 0 0;
+				}
+
+				20% {
+					background-position: -100%, 0;
+				}
+			}
+		</style>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<meta name="keywords" content="微商软件官网系统">
+		<meta name="description" content="微商软件官网系统">
+	</head>
+	<script>
+		function refresh() {
+			url = location.href;
+			console.log(url);
+			var once = url.split("#");
+			if (once[1] != 1) {
+				url += "#1";
+				self.location.replace(url);
+				window.location.reload();
+			}
+		}
+		setTimeout('refresh()', 1000);
+	</script>
+
+	<style type="text/css">
+		#demo {
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			/*border-radius: 80px;*/
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var demo = document.getElementById('demo');
+			var sx = sy = 15;
+			var x = y = 0;
+
+			function move() {
+				if (document.documentElement.clientWidth - demo.offsetWidth - 10 < x || x < 0) {
+					sx = -sx;
+				}
+
+				if (document.documentElement.clientHeight - demo.offsetHeight - 10 < y || y < 0) {
+					sy = -sy;
+				}
+
+				x = demo.offsetLeft + sx;
+				y = demo.offsetTop + sy;
+
+				demo.style.left = x + 'px';
+				demo.style.top = y + 'px';
+			}
+
+			var timer = setInterval(move, 100);
+
+			demo.onmouseover = function() {
+				clearInterval(timer);
+			}
+
+			demo.onmouseout = function() {
+				timer = setInterval(move, 100);
+			}
+		}
+	</script>
+	<img src="http://dh.andapp.top/images/logo.png" id="demo" />
+
+
+	<body>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-family: "Microsoft YaHei";
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+			}
+
+			body {
+				margin: 0;
+				background: #edf2f7;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+
+			.container {
+				padding: 0 12px;
+				width: 100%;
+			}
+
+			.cont_center {
+				text-align: center;
+			}
+
+			.lb2 {
+				width: 100%;
+				background-color: #fff;
+				font-size: 12px;
+				line-height: 20px;
+				margin: 5px 0;
+				border-radius: 5px;
+				padding: 5px 16px
+			}
+
+			.lb4 {
+				width: 100%;
+				background-color: #915a8e;
+				font-size: 12px;
+				line-height: 20px;
+				margin: 5px 0;
+				border-radius: 5px;
+				padding: 5px 16px
+			}
+
+			.gg_bt {
+				font-size: 15px;
+				padding: 10px 9px;
+				color: #aa55ff;
+			}
+
+			.gg_cont {
+				line-height: 30px;
+				font-size: 13px;
+				color: #777;
+			}
+
+			.soft_btn {
+				background: #f88e31;
+				color: #f88e31;
+				padding: 12px;
+				border-radius: 40px;
+				margin: 10px 0;
+				width: 100%;
+				display: block;
+				text-align: center;
+			}
+
+			.soft_btn:hover {
+				background: #0d69a7;
+			}
+		</style>
+
+		<div id="content-wrapper" class="container" style="">
+			<style>
+				img {
+					border-radius: 5px;
+				}
+			</style>
+			<pre>       </pre>
+			<img src="http://dh.andapp.top/images/banner.jpg" width="100%">
+
+			<div class="lb4">
+
+				<div class="gg_bt">
+
+					<div class="gg_cont">
+
+						🔸<font color="#FFFFFF">安装后请关闭微信自动更新</font>
+
+						<br>
+						<h4>🔸<font color="#FFFF00">默认iPad双模式</font>
+						</h4>
+
+						🔸<font color="#fff">下载完成后，请按以下操作使用↓↓</font>
+						<br>
+
+						🔸<font color="#fff">打开手机设置-找到权限-所有权限打开！</font>
+						<br>
+						🔸<font color="#fff">温馨提示！分身后，请按以下操作使用↓↓</font>
+						<br>
+						🔸<font color="#fff">打开手机设置-找到权限-分身的应用-所有权限打开！</font>
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+			<script type="text/javascript">
+				var login = document.getElementById('login');
+				var over = document.getElementById('over');
+
+				function show() {
+					login.style.display = "block";
+					over.style.display = "block";
+				}
+
+				function hide() {
+					login.style.display = "none";
+					over.style.display = "none";
+				}
+			</script>
+
+
+
+			<a href="https://wwf.lanzoue.com/b03jl6kza" class="soft_btn" onclick="return confirm('文件密码：1234');">
+				<div style="color:#fff">【点击下载小鸭子分身】</div>
+			</a>
+			<a href="https://share.lexar.com/share/s/0b8c54e1bbda46f68eb6cae6aee8c638" class="soft_btn">
+				<div style="color:#fff">【备用下载地址】</div>
+			</a>
+			<a href="http://input.hyhuo.com/hy-upload/2022/1115/1bfcad97b3b606e8bf0270a3172b6ee6/1bfcad97b3.mp4" class="soft_btn">
+				<div style="color:#fff">【点击查看部分功能使用教程】</div>
+			</a>
+			<a href="https://io31.github.io/md/img/jc.jpg" class="soft_btn">
+				<div style="color:#fff">【禁止微信自动更新教程】</div>
+			</a>
+			<a href="sc.html" class="soft_btn">
+				<div style="color:#fff">商品素材自动提取区</div>
+			</a>
+
+
+			<style>
+				img {
+					border-radius: 5px;
+				}
+			</style>
+			<img src="http://dh.andapp.top/images/xc.jpg" width="100%">
+		</div>
+		<br>
+
+		<script type="text/javascript">
+			function clickEffect() {
+				let balls = [];
+				let longPressed = false;
+				let longPress;
+				let multiplier = 0;
+				let width, height;
+				let origin;
+				let normal;
+				let ctx;
+				const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
+				const canvas = document.createElement("canvas");
+				document.body.appendChild(canvas);
+				canvas.setAttribute("style",
+					"width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+				const pointer = document.createElement("span");
+				pointer.classList.add("pointer");
+				document.body.appendChild(pointer);
+
+				if (canvas.getContext && window.addEventListener) {
+					ctx = canvas.getContext("2d");
+					updateSize();
+					window.addEventListener('resize', updateSize, false);
+					loop();
+					window.addEventListener("mousedown", function(e) {
+						pushBalls(randBetween(10, 20), e.clientX, e.clientY);
+						document.body.classList.add("is-pressed");
+						longPress = setTimeout(function() {
+							document.body.classList.add("is-longpress");
+							longPressed = true;
+						}, 500);
+					}, false);
+					window.addEventListener("mouseup", function(e) {
+						clearInterval(longPress);
+						if (longPressed == true) {
+							document.body.classList.remove("is-longpress");
+							pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e
+								.clientY);
+							longPressed = false;
+						}
+						document.body.classList.remove("is-pressed");
+					}, false);
+					window.addEventListener("mousemove", function(e) {
+						let x = e.clientX;
+						let y = e.clientY;
+						pointer.style.top = y + "px";
+						pointer.style.left = x + "px";
+					}, false);
+				} else {
+					console.log("canvas or addEventListener is unsupported!");
+				}
+
+
+				function updateSize() {
+					canvas.width = window.innerWidth * 2;
+					canvas.height = window.innerHeight * 2;
+					canvas.style.width = window.innerWidth + 'px';
+					canvas.style.height = window.innerHeight + 'px';
+					ctx.scale(2, 2);
+					width = (canvas.width = window.innerWidth);
+					height = (canvas.height = window.innerHeight);
+					origin = {
+						x: width / 2,
+						y: height / 2
+					};
+					normal = {
+						x: width / 2,
+						y: height / 2
+					};
+				}
+				class Ball {
+					constructor(x = origin.x, y = origin.y) {
+						this.x = x;
+						this.y = y;
+						this.angle = Math.PI * 2 * Math.random();
+						if (longPressed == true) {
+							this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+						} else {
+							this.multiplier = randBetween(6, 12);
+						}
+						this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
+						this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
+						this.r = randBetween(8, 12) + 3 * Math.random();
+						this.color = colours[Math.floor(Math.random() * colours.length)];
+					}
+					update() {
+						this.x += this.vx - normal.x;
+						this.y += this.vy - normal.y;
+						normal.x = -2 / window.innerWidth * Math.sin(this.angle);
+						normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+						this.r -= 0.3;
+						this.vx *= 0.9;
+						this.vy *= 0.9;
+					}
+				}
+
+				function pushBalls(count = 1, x = origin.x, y = origin.y) {
+					for (let i = 0; i < count; i++) {
+						balls.push(new Ball(x, y));
+					}
+				}
+
+				function randBetween(min, max) {
+					return Math.floor(Math.random() * max) + min;
+				}
+
+				function loop() {
+					ctx.fillStyle = "rgba(255, 255, 255, 0)";
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					for (let i = 0; i < balls.length; i++) {
+						let b = balls[i];
+						if (b.r < 0) continue;
+						ctx.fillStyle = b.color;
+						ctx.beginPath();
+						ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2, false);
+						ctx.fill();
+						b.update();
+					}
+					if (longPressed == true) {
+						multiplier += 0.2;
+					} else if (!longPressed && multiplier >= 0) {
+						multiplier -= 0.4;
+					}
+					removeBall();
+					requestAnimationFrame(loop);
+				}
+
+				function removeBall() {
+					for (let i = 0; i < balls.length; i++) {
+						let b = balls[i];
+						if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+							balls.splice(i, 1);
+						}
+					}
+				}
+			}
+			clickEffect(); //调用特效函数
+		</script>
+		<script type="text/javascript">
+			var browser = {
+				versions: function() {
+					var u = navigator.userAgent,
+						app = navigator.appVersion;
+					return { //移动终端浏览器版本信息
+						trident: u.indexOf('Trident') > -1, //IE内核
+						presto: u.indexOf('Presto') > -1, //opera内核
+						webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+						gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+						mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+						android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+						iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+						iPad: u.indexOf('iPad') > -1, //是否iPad
+						webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+					};
+				}(),
+				language: (navigator.browserLanguage || navigator.language).toLowerCase()
+			}
+
+			function is_weixin() {
+				var ua = navigator.userAgent.toLowerCase();
+				var isIosQQ = (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent) && /\sQQ/i.test(navigator.userAgent));
+				var isAndroidQQ = (/(Android)/i.test(navigator.userAgent) && /MQQBrowser/i.test(navigator.userAgent) && /\sQQ/i
+					.test((navigator.userAgent).split('MQQBrowser')));
+				var isQQ = isIosQQ || isAndroidQQ;
+				if (ua.match(/MicroMessenger/i) == "micromessenger" || isQQ) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			var isWeixin = is_weixin();
+			var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement
+				.clientHeight;
+
+			function loadHtml() {
+
+				var div = document.createElement('div');
+				div.id = 'weixin-tip';
+				if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+					div.innerHTML =
+						'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="梵高团队出品"/></p>';
+				} else if (browser.versions.android) {
+					div.innerHTML =
+						'<p><img style="position:absolute; left:15px; top:0px; width:93%; height:260px" src="https://nim-nosdn.netease.im/MTExNTUxNzE=/bmltYV8zMzY4NzE2MzU4NV8xNjUwMTIyNTM4NDg0XzMxNWU1OGQwLTNlZjAtNDQ1ZC04NjQ5LTY3ZWFjNWM4MmE2YQ==?createTime=1650122538666" alt="梵高团队出品"/></p>';
+				}
+				document.body.appendChild(div);
+			}
+
+			function loadStyleText(cssText) {
+				var style = document.createElement('style');
+				style.rel = 'stylesheet';
+				style.type = 'text/css';
+				try {
+					style.appendChild(document.createTextNode(cssText));
+				} catch (e) {
+					style.styleSheet.cssText = cssText; //ie9以下
+				}
+				var head = document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+				head.appendChild(style);
+			}
+			var cssText =
+				"#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+			if (isWeixin) {
+				loadHtml();
+				loadStyleText(cssText);
+			}
+		</script>
+	</body>
+</html>
