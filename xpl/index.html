@@ -1,0 +1,278 @@
+<!DOCTYPE html><!-- This web page is copied by "https://bazhan.wang" -->
+<html>
+	<head>
+		<meta name="baidu-analysis-id" content="1f34321h3a341c1j">
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>小魄罗-官方网站</title>
+		<meta name="robots" content="index,follow">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="css/amazeui.min.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link href="css/sweetalert.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/mh_style.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/iconfont.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/sweetalert.min.js"></script>
+		<script src="js/swiper.min.js"> </script>
+
+		<style>
+			.hide {
+				display: none;
+			}
+
+			.hide2 {
+				display: none;
+			}
+
+			.modal {
+				position: absolute;
+				height: 167px;
+				width: 300px;
+				margin-left: 8%;
+				margin-top: -350px;
+				background: #fff;
+				z-index: 1000;
+				text-align: center;
+				border-radius: 10px;
+			}
+
+			.modal2 {
+				position: absolute;
+				height: 167px;
+				width: 300px;
+				margin-left: 8%;
+				margin-top: -350px;
+				background: #fff;
+				z-index: 1000;
+				text-align: center;
+				border-radius: 10px;
+			}
+
+			.pop_tip_text {
+				font-size: 16px;
+				line-height: 25px;
+				padding: 20px;
+				text-align: center;
+			}
+
+			.pop_tip_text2 {
+				font-size: 16px;
+				line-height: 25px;
+				padding: 20px;
+				text-align: center;
+			}
+
+			.shade {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				opacity: 0.6;
+				background-color: black;
+				z-index: 9;
+			}
+
+			.shade2 {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				opacity: 0.6;
+				background-color: black;
+				z-index: 9;
+			}
+
+			.confirm {
+				/* background: #6b7fda;
+          margin: 10px 10px; */
+				margin: 0 8px;
+				display: inline-block;
+				width: calc(50% - 50px);
+				background: #70b4fd;
+				text-align: center;
+				line-height: 32px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+
+			.cancel {
+				/* background: #9c9a9a;
+          margin: 10px 10px; */
+				margin: 0 8px;
+				display: inline-block;
+				width: calc(50% - 50px);
+				background: #9c9a9a;
+				text-align: center;
+				line-height: 32px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+
+			.cancel:hover {
+				background: #cfcdcd;
+			}
+
+			.confirm:hover {
+				background: #98a2ce;
+			}
+
+			.code_div {
+				margin-top: 20px;
+			}
+
+			.input_code {
+				margin-top: 20px;
+				width: 250px;
+				height: 50px;
+				border: 1px solid #c8cccf;
+			}
+		</style>
+
+
+		<!-- 生产环境版本，优化了尺寸和速度 -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!--!‫‬‭‭‪‎‭‪‬‫‬‏‭‫‎‭‪‎‫‬‪‫‭‫-->
+		<script type="text/javascript">
+			var baseUrl = '${base}';
+			adaptation(750);
+
+			function adaptation(size) {
+				if (document.documentElement.clientWidth > size) {
+					document.documentElement.style.fontSize = size / 7.5 + "px"
+				} else {
+					document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px"
+				}
+			}
+		</script>
+		<!--!‫‬‭‭‪‎‭‪‬‫‬‏‭‫‎‭‪‎‫‬‪‫‭‫-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?d3b437809032a545e6cf9f2afc03807d";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+		<script type="text/javascript">
+			var is_weixin = (function() {
+				var ua = navigator.userAgent.toLowerCase();
+				if (ua.match(/MicroMessenger/i) == "micromessenger") { //微信中打开网页
+					window.onload = function() {
+						//var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+						var tip = document.getElementById('weixin-tip-box');
+						if (is_weixin) {
+							tip.style.display = 'block';
+							tip.style.position = 'absolute';
+							tip.style.zIndex = '100';
+							tip.style.backgroundColor = 'white';
+							return false;
+						}
+					};
+					return true;
+				} else if (ua.match(/QQ/i) == "qq") { //qq里打开网页
+					window.onload = function() {
+						//var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+						var tip = document.getElementById('weixin-tip-box');
+						if (is_weixin) {
+							tip.style.display = 'block';
+							tip.style.position = 'absolute';
+							tip.style.zIndex = '100';
+							tip.style.backgroundColor = 'white';
+							return false;
+						}
+					};
+					return true;
+				} else {
+					var baseUrl = '${base}';
+					adaptation(750);
+
+					function adaptation(size) {
+						if (document.documentElement.clientWidth > size) {
+							document.documentElement.style.fontSize = size / 7.5 + "px"
+						} else {
+							document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px"
+						}
+					}
+
+					var _hmt = _hmt || [];
+					(function() {
+						var hm = document.createElement("script");
+						hm.src = "https://hm.baidu.com/hm.js?d3b437809032a545e6cf9f2afc03807d";
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(hm, s);
+					})();
+					return true;
+				}
+			})();
+		</script>
+
+	</head>
+	<body>
+		<div id="weixin-tip-box">
+			<div class="weixin-tip">
+				<img src="img/yindao.png" alt="微信打开" style="width: 100%; height: 800px;">
+			</div>
+			<div class="triangle_border_up"></div>
+		</div>
+
+		<div class="warp" id="all">
+			<div id="content-wrapper" class="container">
+				<div class="container text-center" style="line-height:30px;">
+				</div>
+				<div class="container">
+					<div class="grid-6 text-center">
+						<div>
+							<video id="myVideo" style="width: 100%;border-radius: 10px;"  controls autoplay loop>
+								<source src="img/video.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div class="lb2 gonggao">
+							
+							<font color="#FFF"> 苹果小魄罗-独家一码四开版本</font><br>
+							<font color="#FFF"> 24小时后台通知(自动开启省电)</font><br>
+							<font color="#FFF"> 稳定,防封,流畅,节能!不封号不卡顿！</font><br>
+						</div>
+					</div>
+
+
+					<div>
+						<a data-src="bm/index.html" href="https://wwxd.lanzoue.com/b03k63obi"
+							class="btn btn-primary btn-lg download">点击安装</a>
+					</div>
+
+					<div>
+						<a data-src="bm/index.html" href="https://wwxd.lanzoue.com/b03k63ocj"
+							class="btn btn-primary btn-lg download">备用地址</a>
+					</div>
+
+					<div>
+						<a data-src="https://howtouse.cowtransfer.com/s/b6b26d65d10a47" href="http://input.hyhuo.com/hy-upload/2023/0216/9a095e4e48744989da721a7a44576b58/9a095e4e48.mp4"
+							class="btn btn-primary btn-lg download">掉签恢复聊天记录教程</a>
+					</div>
+
+					<p>
+
+					</p>
+					<div>
+							<img src="img/poluo.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		  var video = document.getElementById("myVideo");
+		  video.addEventListener('loadedmetadata', function() {
+		    video.volume = 0.2; // 设置音量为50%
+		  });
+	</script>
+</html>
