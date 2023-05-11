@@ -1,0 +1,58 @@
+.banner {}
+
+.banner img {
+	width: 100%;
+	border-radius: 2.125rem;
+}
+
+.guo {
+	width: 80%;
+	height: 2.5rem;
+	padding-left: 10%;
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+.left {
+
+	float: left;
+	width: 58%;
+	height: 100%;
+}
+
+.left img {
+	width: 100%;
+	border-radius: 2.125rem;
+	margin-top: 0.625rem;
+}
+
+.right {
+	float: left;
+	width: 38%;
+	margin-left: 0.625rem;
+}
+
+.gg_cont {
+	line-height: 20px;
+	font-size: 13px;
+	color: #000000;
+	background-color: rgb(0 0 0 / 20%) !important;
+	border-radius: 1rem;
+	padding: 0 0 0 1.25rem;
+}
+
+.button {
+	width: 95%;
+	height: 2.25rem;
+	background-color: rgb(0 0 0 / 20%) !important;
+	margin-top: 0.625rem;
+	border-radius: 0.625rem;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #ddd;
+
+}
+.button a {
+	text-decoration: none;
+	color: #000000;
+}
