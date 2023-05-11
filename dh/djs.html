@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <embed src="http://sz.sycdn.kuwo.cn/bbaaca8623f9d9bb130f8e8573b36c22/5ffc0cea/resource/n2/85/78/2371900487.mp3" hidden="true" autostart="true">
+    <title></title>
+</head>
+<body>
+    <div style="padding-top: 10%;">
+    <h1><font color="ff0000"></font><div class="text" style=" text-align:center;"><font color="ff0000"><img class="wp-smiley" src="https://cdn.qqsuu.cn/Gallery/denglong.gif" alt="网站春节倒计时代码分享" title="灯笼" alt="灯笼">春节倒计时<img class="wp-smiley" src="https://cdn.qqsuu.cn/Gallery/denglong.gif" alt="网站春节倒计时代码分享" title="灯笼" alt="灯笼"></font></div></h1>
+    <h3 id="title-1"><div class="text" style=" text-align:center;">2023年春节：2023年1月22日 星期日 农历正月初一<img class="wp-smiley" src="https://cdn.qqsuu.cn/Gallery/meigui.png" alt="网站春节倒计时代码分享" title="玫瑰" alt="玫瑰"></div></h3>
+    <h3 id="title-2"><div class="text" style=" text-align:center;"><img class="wp-smiley" src="https://cdn.qqsuu.cn/Gallery/taiyang.png" alt="网站春节倒计时代码分享" title="太阳" alt="太阳">距离2021年春节过年还有<img class="wp-smiley" src="https://cdn.qqsuu.cn/Gallery/89.png" alt="网站春节倒计时代码分享"></div></h3>
+    <div><div class="text" style=" text-align:center;">
+        <span id="t_d">00</span>
+        <span id="t_h">00</span>
+        <span id="t_m">00</span>
+        <span id="t_s">00</span>
+    </div>
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2023/01/22 00:00:00'); //截止时间
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+  
+        document.getElementById("t_d").innerHTML = d + " 天";
+        document.getElementById("t_h").innerHTML = h + " 时";
+        document.getElementById("t_m").innerHTML = m + " 分";
+        document.getElementById("t_s").innerHTML = s + " 秒";
+    }
+    setInterval(getRTime,1000);
+    </script>
+</body>
+</html>
