@@ -262,19 +262,6 @@
 width: 100%;
 }
 
-/*隐藏转到登录*/
-.hope-c-PJLV-ijzCLcW-css{
-display: none;
-}
-
-/*readme居中*/
-    .hope-c-PJLV-iiuDLME-css {
-        text-align: center;
-    }
-
-.hope-c-PJLV-ikuZzan-css {
-  display: none;
-}
 
 /*readme居中*/
     .hope-c-PJLV-ikSuVsl-css {
@@ -287,51 +274,7 @@ font-size: 14.5px;
 line-height: 1.7;
 }
 
- <-- 首页弹窗带密码-->// 密码可自行对接其他API --> 
 
-<script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
-<script>
-    let password = "4241";
-    if (localStorage.getItem('pan_password') == password) {
-
-    } else {
-        checkPassword("success", "输入密码进入")
-    }
-
-    function checkPassword(ic, ti) {
-        swal({
-                title: "艾峰科技源站免责申明",
-                text: "\n本站所展示内容均收集于网络\n\n仅供本人学习研究及收藏存档\n如有侵犯权益，敬请联系删除\n公众号：艾峰科技(假的)\n回复【验证码】获取密码",
-                closeOnConfirm: false,
-                closeOnClickOutside: false,
-                icon: ic,
-                button: {
-                    text: "确认",
-                },
-                content: {
-                    element: "input",
-                    attributes: {
-                        placeholder: "Type your password",
-                        type: "password",
-                    },
-                },
-            })
-            .then((value) => {
-                if (value == '') {
-                    checkPassword("warning", "请输入正确的密码");
-                } else if (value == password) {
-                    swal("欢迎！下拉刷新即可", {
-                        button: false,
-                    });
-                    localStorage.setItem("pan_password", value);
-                } else {
-                    checkPassword("warning", "密码错误");
-                }
-            });
-
-    }
-</script>
-	
 	
 				
 <h2 key="h2-35-1-19">📟  联系🔥 方式 ⤵ 📟</h2>
